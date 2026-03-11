@@ -1,0 +1,120 @@
+user_input = ""
+while user_input != "quit":
+    Day = input("What day is it? (no abbreviations) ").lower()
+    Lunch = input("What Lunch are you? (A B C) ").lower()
+    if Day == "quit":
+        quit()
+
+    print("USE MILITARY TIME!")
+
+    if Day == "monday" or Day == "tuesday" or Day == "friday":
+        Time = input("What time is it? xx:xx ")
+
+        if "00:00" <= Time <= "07:39":
+            print("This is before school.")
+        elif "14:40" <= Time <= "23:59":
+            print("This is after school.")
+        elif "07:40" <= Time <= "08:24":
+            print("This is during school, 1st Hour.")
+        elif "08:25" <= Time <= "08:29":
+            print("This is your passing period.")
+        elif "08:30" <= Time <= "09:14":
+            print("This is during school, 2nd Hour.")
+        elif "09:15" <= Time <= "09:19":
+            print("This is your passing period.")
+        elif "09:20" <= Time <= "10:04":
+            print("This is during school, 3rd Hour.")
+        elif "10:05" <= Time <= "10:09":
+            print("This is your passing period.")
+        elif "10:10" <= Time <= "10:49":
+            print("This is during school, Advisory.")
+        elif (Lunch == "a") and "10:50" <= Time <= "10:54":
+            print("This is 4th hour and you have lunch from 10:50 - 11:17.")
+        elif "10:50" <= Time <= "10:54":
+            print("This is your passing period.")
+        elif "10:55" <= Time <= "12:09":
+            print("This is during school, 4th Hour.")
+            if Lunch == "a":
+                print("You have lunch from 10:50 - 11:17.")
+            elif Lunch == "b":
+                print("You have lunch from 11:17 - 11:42.")
+            elif Lunch == "c":
+                print("You have lunch from 11:42 - 12:09.")
+        elif "12:10" <= Time <= "12:14":
+            print("This is your passing period.")
+        elif "12:15" <= Time <= "12:59":
+            print("This is during school, 5th Hour.")
+        elif "13:00" <= Time <= "13:04":
+            print("This is your passing period.")
+        elif "13:05" <= Time <= "13:49":
+            print("This is during school, 6th Hour.")
+        elif "13:50" <= Time <= "13:54":
+            print("This is your passing period.")
+        elif "13:55" <= Time <= "14:39":
+            print("This is during school, 7th Hour.")
+
+    elif Day == "wednesday":
+        Time = input("What time is it? xx:xx ")
+
+        if "00:00" <= Time <= "07:39":
+            print("This is before school.")
+        elif "14:40" <= Time <= "23:59":
+            print("This is after school.")
+        elif "07:40" <= Time <= "09:14":
+            print("This is during school, 1st Hour.")
+        elif "09:15" <= Time <= "09:19":
+            print("This is your passing period.")
+        elif "09:20" <= Time <= "10:54":
+            print("This is during school, 3rd Hour.")
+        elif (Lunch == "a") and "10:55" <= Time <= "11:20":
+            print("This is during 5th hour, and you have lunch from 10:55 - 11:20.")
+        elif "10:55" <= Time <= "10:59":
+            print("This is your passing period.")
+        elif "11:00" <= Time <= "12:59":
+            print("This is during school, 5th Hour.")
+            if Lunch == "a":
+                print("You have lunch from 10:55 - 11:20.")
+            elif Lunch == "b":
+                print("You have lunch from 11:45 - 12:10.")
+            elif Lunch == "c":
+                print("You have lunch from 11:35 - 13:00.")
+        elif "13:00" <= Time <= "13:04":
+            print("This is your passing period.")
+        elif "13:05" <= Time <= "14:39":
+            print("This is during school, 7th Hour.")
+
+    elif Day == "thursday":
+        Time = input("What time is it? xx:xx ")
+
+        if "00:00" <= Time <= "07:54":
+            print("This is before school.")
+        elif "14:40" <= Time <= "23:59":
+            print("This is after school.")
+        elif "07:55" <= Time <= "09:29":
+            print("This is during school, 2nd Hour.")
+        elif "09:30" <= Time <= "09:34":
+            print("This is your passing period.")
+        elif "09:35" <= Time <= "10:54":
+            print("This is during school, Advisory.")
+        elif (Lunch == "a") and "10:55" <= Time <= "11:20":
+            print("This is during 4th hour and you have lunch from 10:55 - 11:20.")
+        elif "10:55" <= Time <= "10:59":
+            print("This is your passing period.")
+        elif "11:00" <= Time <= "12:59":
+            print("This is during school, 4th Hour.")
+            if Lunch == "a":
+                print("You have lunch from 10:55 - 11:20.")
+            elif Lunch == "b":
+                print("You have lunch from 11:45 - 12:10.")
+            elif Lunch == "c":
+                print("You have lunch from 11:35 - 13:00.")
+        elif "13:00" <= Time <= "13:04":
+            print("This is your passing period.")
+        elif "13:05" <= Time <= "14:39":
+            print("This is during school, 6th Hour.")
+
+    elif Day == "saturday" or Day == "sunday":
+        print("You are out of school!")
+    else:
+        print("Check your spelling and choose a valid day.")
+        print(" ")
